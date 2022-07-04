@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>To Do List</title>
+</head>
+<body>
+
+    <div class="box" id="heading">
+        <h1 class="todoText">To Do List</h1>
+        <h1> <%= data %> </h1>
+    </div>
+    
+
+    <div class="box">
+        <% for( let i = 0; i < novoItem.length; i++ ) { %>
+            <div class="item">
+                <input type="checkbox">
+                <p> <%= novoItem[i] %>  </p>
+            </div>            
+        <% } %>
+        <form action="/" method="post">
+            <input type="text" name="novoItem" placeholder="Digite atividade" autocomplete="off">
+            <button type="submit"> + </button>
+        </form>
+    </div>
+
+    
+    
+</body>
+</html>
